@@ -1,0 +1,155 @@
+/* Global Styles */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Times New Roman, Georgia, serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+/* Navigation Bar */
+
+nav {
+    background: #333;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #ccc;
+}
+
+/* Toggle Navigation Button for Smaller Screens */
+
+nav button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #fff;
+}
+
+/* Hero Section */
+
+#home {
+    background: #02e7f7; /* Sky Blue */
+    padding: 5em 2em;
+    text-align: center;
+    color: #333;
+}
+
+#home h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+#home button {
+    background: #f7b202; /* Orange */
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#home button:hover {
+    background: #a17d23; /* Darker Orange*/
+}
+
+/* Content Sections */
+
+section {
+    background: #b3b0ab;
+    color: #333;
+    padding: 2em;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+h2 {
+    color: #333;
+    margin-top: 0;
+}
+
+/* Planet and Galaxy Cards */
+
+.planet-container, .galaxy-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.planet, .galaxy {
+    background: #b3b0ab;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    width: calc(33.33% - 20px);
+    cursor: pointer; /* Add cursor pointer for click effect */
+    transition: transform 0.3s ease; /* Add transition for smooth scaling */
+}
+
+.planet:hover, .galaxy:hover {
+    background: #fff;
+    transform: scale(1.1);
+    z-index: 1;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Footer */
+
+footer {
+    background: #333;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+    clear: both;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Media Queries for Responsiveness */
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav li {
+        margin: 10px 0;
+    }
+    .planet, .galaxy {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .planet, .galaxy {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
